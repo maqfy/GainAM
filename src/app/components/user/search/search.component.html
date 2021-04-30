@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-9 col-sm-12 mt-5">
+      <input
+        type="text"
+        placeholder="enter name"
+        class="form-control"
+        name="name"
+        [(ngModel)]="name"
+      />
+    </div>
+    <div class="col-lg-3 col-sm-12 mt-5">
+      <button type="button" class="btn btn-info" (click)="findProductByname()">
+        Search
+      </button>
+    </div>
+  </div>
+  <h2 class="mt-5">Results</h2>
+  <div class="row col-lg-12 col-sm-12">
+    <table class="table">
+      <tbody>
+        <tr>
+          <td>{{ product.id }}</td>
+          <td>{{ product.name }}</td>
+          <td>{{ product.price }}</td>
+          <button type="button" class="btn btn-info" (click)="addtocart()">
+            add to cart
+          </button>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
